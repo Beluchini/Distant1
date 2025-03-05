@@ -1,0 +1,36 @@
+﻿@page "/"
+@using Distante.functions
+@using Newtonsoft.Json
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+@code
+{
+    public IList<UnSon>? list = new List<UnSon>();
+    protected override void OnInitialized()
+    {
+        OpenFile();
+    }
+
+    public void OpenFile()
+    {
+        if (File.Exists("services.json"))
+        {
+            string json = File.ReadAllText(path: "services.json");
+            list = JsonConvert.DeserializeObject<List<UnSon>>(json);
+        }
+        else
+        {
+            SaveFile();
+        }
+    }
+
+    public void SaveFile()
+    {
+        var json = JsonConvert.SerializeObject(list);
+        File.WriteAllText("services.json", json);
+    }
+}
