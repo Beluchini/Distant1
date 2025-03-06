@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6UvF5I4otbL7pc5bVSPdYWOpY5CGSVelB/OZ3wlWhcM=",
+  "Hash": "2OaLs/li3EocOg4SB1qZo3u+goTrG8JC6Pk5qVQeU2k=",
   "Source": "Distante",
   "BasePath": "_content/Distante",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\я\\RiderProjects\\Distante\\Distante\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Distante.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\я\\RiderProjects\\Distante\\Distante\\wwwroot\\9292a89f7627d7fc10f2c2cbf396f908.jpg",
+      "SourceId": "Distante",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\я\\RiderProjects\\Distante\\Distante\\wwwroot\\",
+      "BasePath": "_content/Distante",
+      "RelativePath": "9292a89f7627d7fc10f2c2cbf396f908.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\9292a89f7627d7fc10f2c2cbf396f908.jpg"
     },
     {
       "Identity": "C:\\Users\\я\\RiderProjects\\Distante\\Distante\\wwwroot\\app.css",

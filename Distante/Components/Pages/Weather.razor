@@ -1,67 +1,54 @@
 ﻿@page "/weather"
 @attribute [StreamRendering]
-
+@using Newtonsoft.Json
 <PageTitle>Weather</PageTitle>
-
-<h1>Weather</h1>
-
-<p>This component demonstrates showing data.</p>
-
-@if (forecasts == null)
-{
-    <p>
-        <em>Loading...</em>
-    </p>
-}
-else
-{
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var forecast in forecasts)
-        {
-            <tr>
-                <td>@forecast.Date.ToShortDateString()</td>
-                <td>@forecast.TemperatureC</td>
-                <td>@forecast.TemperatureF</td>
-                <td>@forecast.Summary</td>
-            </tr>
-        }
-        </tbody>
-    </table>
-}
-
+<select>
+    @foreach (var item in _list)
+    {
+        <option>
+            @item
+        </option>
+    }
+</select>
+<select>
+    @foreach (var item in _List)
+    {
+        <option>
+            @item
+        </option>
+    }
+</select>
+<input type="date" />
 @code {
-    private WeatherForecast[]? forecasts;
-
-    protected override async Task OnInitializedAsync()
+    public string NewNote { get; set; }
+    public IList<string> _list = new List<string>();
+    public IList<string> _List = new List<string>();
+    
+    protected override void OnInitialized()
     {
-        // Simulate asynchronous loading to demonstrate streaming rendering
-        await Task.Delay(500);
+        OpenFile();
+    }
 
-        var startDate = DateOnly.FromDateTime(DateTime.Now);
-        var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
-        forecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+    public void OpenFile()
+    {
+        if (File.Exists("servic.json"))
         {
-            Date = startDate.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = summaries[Random.Shared.Next(summaries.Length)]
-        }).ToArray();
+            string json = File.ReadAllText(path: "servic.json");
+            string jsom = File.ReadAllText(path: "client.json");
+            _list = JsonConvert.DeserializeObject<List<string>>(json);
+            _List = JsonConvert.DeserializeObject<List<string>>(jsom);
+        }
+        else
+        {
+            SaveFile();
+        }
     }
 
-    private class WeatherForecast
+    public void SaveFile()
     {
-        public DateOnly Date { get; set; }
-        public int TemperatureC { get; set; }
-        public string? Summary { get; set; }
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        var json = JsonConvert.SerializeObject(_list);
+        var jsom = JsonConvert.SerializeObject(_List);
+        File.WriteAllText("servic.json", json);
+        File.WriteAllText("client.json", jsom);
     }
-
 }

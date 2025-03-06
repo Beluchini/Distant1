@@ -195,3 +195,8 @@ h1:focus {
     border: 1px solid blue;
     border-radius: 5px;
 }
+.bakc{
+    background-image: url("9292a89f7627d7fc10f2c2cbf396f908.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
