@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distante", "Distante\Distante.csproj", "{E9D2E702-BF18-4A0F-BF05-A8A76FDE6F6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{EA8CC8C1-2986-4627-8077-F9AFC30F38DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9D2E702-BF18-4A0F-BF05-A8A76FDE6F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9D2E702-BF18-4A0F-BF05-A8A76FDE6F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9D2E702-BF18-4A0F-BF05-A8A76FDE6F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9D2E702-BF18-4A0F-BF05-A8A76FDE6F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA8CC8C1-2986-4627-8077-F9AFC30F38DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8CC8C1-2986-4627-8077-F9AFC30F38DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA8CC8C1-2986-4627-8077-F9AFC30F38DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA8CC8C1-2986-4627-8077-F9AFC30F38DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
