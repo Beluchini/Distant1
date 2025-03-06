@@ -22,16 +22,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/я/RiderProjects/Distante/Distante/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
+[C:/Users/я/RiderProjects/Distante/Distante/Components/Pages/CarRepeir.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXJSZXBlaXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/я/RiderProjects/Distante/Distante/Components/Pages/Client.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDbGllbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/я/RiderProjects/Distante/Distante/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/я/RiderProjects/Distante/Distante/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/я/RiderProjects/Distante/Distante/Components/Pages/Weather.razor]

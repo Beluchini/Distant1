@@ -1,25 +1,43 @@
 ﻿@page "/"
 @using Newtonsoft.Json
 @rendermode InteractiveServer
-<PageTitle>Авторемонт</PageTitle>
-<h1 class="tab" >АвтоРемонт</h1>
-<div>
+<PageTitle>CarRepeir</PageTitle>
+<body class="back">
+</body>
+<div class="view">
+    <a style="text-decoration: none" href="https://localhost:44312/Client">
+            <div class="clie">
+                Клиенты
+            </div>
+    </a>
+    <a style="text-decoration: none" href="https://localhost:44312/weather">
+        <div class="note">
+            Запись на услуги
+        </div>
+    </a>
+</div>
+<div class="heaf">
     <div>
-        <input type="text" @bind="NewService"/>
-        <button @onclick="AddFile">Добавить</button>
-        <button @onclick="SaveFile">Сохранить</button>
+        <h1>АвтоРемонт</h1>
+        <div>
+            <input class="inp" type="text" @bind="NewService"/>
+            <div class="file">
+                <button class="serv" @onclick="AddFile">Добавить услугу</button>
+                <button class="save" @onclick="SaveFile">Сохранить базу</button>
+            </div>
+        </div>
     </div>
 </div>
 <div>
-    <div>
+    <div class="body">
         <div class="view">
             @foreach (var item in list)
             {
                 <div href="" class="tabUp">
                     <h1 class="itemu">@item</h1>
-                <div>
-                    <button @onclick="() => RemoveKeep(item)" class="tabDown"><h3>Удалить</h3></button>
-                </div>
+                    <div>
+                        <button @onclick="() => Remove(item)" class="tabDown"><h3>Удалить</h3></button>
+                    </div>
                 </div>
             }
         </div>
@@ -52,7 +70,7 @@
         var json = JsonConvert.SerializeObject(list);
         File.WriteAllText("servic.json", json);
     }
-    private void RemoveKeep(string item)
+    private void Remove(string item)
     {
         list.Remove(item);
         SaveFile();

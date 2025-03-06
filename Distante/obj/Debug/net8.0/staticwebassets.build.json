@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SU8/QZ/yXWYWCXCawYEUvL9JyI98LUlzUz1k4E2YUE4=",
+  "Hash": "6UvF5I4otbL7pc5bVSPdYWOpY5CGSVelB/OZ3wlWhcM=",
   "Source": "Distante",
   "BasePath": "_content/Distante",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\я\\RiderProjects\\Distante\\Distante\\wwwroot\\rgeh.png",
+      "SourceId": "Distante",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\я\\RiderProjects\\Distante\\Distante\\wwwroot\\",
+      "BasePath": "_content/Distante",
+      "RelativePath": "rgeh.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rgeh.png"
     }
   ]
 }

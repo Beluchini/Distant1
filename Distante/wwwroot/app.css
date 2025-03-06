@@ -51,23 +51,25 @@ h1:focus {
 }
 .tabUp {
     background-image: url("https://scene7.toyota.eu/is/image/toyotaeurope/car-service-key-features-a-1920x1080tcm-3154-1323224:Large-Landscape?ts=0&resMode=sharp2&op_usm=1.75,0.3,2,0");
-    background-position-x: -200px;
-    margin-left: 5px;
-    margin-top: 10px;
+    background-position-x: -250px;
+    margin-left: 7px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding-top: 30px;
     text-align: center;
-    width: 350px;
+    width: 366px;
     height: 500px;
     border: 1px solid black;
     border-radius: 5px;
 }
 .tabDown {
+    padding-top: 2px;
     color: white;
     background-color: rgba(0, 0, 255, 0.33);
-    margin-top: 5px;
+    margin-top: 2px;
     text-align: center;
-    width: 330px;
-    height: 40px;
+    width: 340px;
+    min-height: 40px;
     border: 1px solid blue;
     border-radius: 5px;
 }
@@ -78,13 +80,118 @@ h1:focus {
     height: 100%;
 }
 .itemu{
+    padding-top: 5px;
     color: white;
     margin-left: 10px;
     background-color: rgba(0, 0, 255, 0.33);
     margin-top: 345px;
     text-align: center;
-    width: 330px;
-    height: 60px;
+    width: 340px;
+    min-height: 60px;
+    max-height: 100px;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+.heaf{
+    padding-top: 10px;
+    margin-left: 340px;
+    margin-top: 250px;
+    border-radius: 100px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    width: 1200px;
+    height: 200px;
+    background-color: rgba(170, 177, 184, 0.63);
+}
+.file{
+    margin-left: -20px;
+    margin-top: 15px;
+}
+.inp{
+    margin-left: -20px;
+    padding-left: 13px;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 4px;
+    width: 500px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+.body{
+    margin-left: 180px;
+    width: 1500px;
+    backdrop-filter: blur(5px);
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.serv{
+    height: 50px;
+    width: 200px;
+    background-color: #1da645;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.save{
+    height: 50px;
+    width: 200px;
+    background-color: #aeaeae;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.clie{
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.54);
+    padding-top: 5px;
+    font-size: 24px;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+.note{
+    margin-top: 20px;
+    margin-left: 1345px;
+    background-color: rgba(255, 255, 255, 0.54);
+    text-align: center;
+    padding-top: 5px;
+    height: 50px;
+    width: 300px;
+    font-size: 24px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+.back{
+    background-image: url("rgeh.png");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.tapUp {
+    background-image: url("https://otoruyasi.com/wp-content/uploads/2012/03/SER60013-12.jpg");
+    margin-left: 7px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 366px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.itemo{
+    padding-top: 5px;
+    color: white;
+    margin-left: 10px;
+    background-color: rgba(0, 0, 255, 0.33);
+    margin-top: 370px;
+    text-align: center;
+    width: 340px;
+    min-height: 60px;
+    max-height: 100px;
     border: 1px solid blue;
     border-radius: 5px;
 }

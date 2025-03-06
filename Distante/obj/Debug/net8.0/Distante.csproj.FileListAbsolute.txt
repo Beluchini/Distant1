@@ -31,5 +31,5 @@ C:\Users\я\RiderProjects\Distante\Distante\obj\Debug\net8.0\refint\Distante.dll
 C:\Users\я\RiderProjects\Distante\Distante\obj\Debug\net8.0\Distante.pdb
 C:\Users\я\RiderProjects\Distante\Distante\obj\Debug\net8.0\Distante.genruntimeconfig.cache
 C:\Users\я\RiderProjects\Distante\Distante\obj\Debug\net8.0\ref\Distante.dll
-C:\Users\я\RiderProjects\Distante\Distante\bin\Debug\net8.0\serv.json
 C:\Users\я\RiderProjects\Distante\Distante\bin\Debug\net8.0\servic.json
+C:\Users\я\RiderProjects\Distante\Distante\bin\Debug\net8.0\client.json

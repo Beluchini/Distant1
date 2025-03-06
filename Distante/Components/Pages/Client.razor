@@ -1,0 +1,82 @@
+﻿@page "/client"
+@using Newtonsoft.Json
+@rendermode InteractiveServer
+<PageTitle>Client</PageTitle>
+<body class="back">
+</body>
+<div class="view">
+    <a style="text-decoration: none" href="https://localhost:44312/">
+        <div class="clie">
+            Услуги
+        </div>
+    </a>
+    <a style="text-decoration: none" href="https://localhost:44312/weather">
+        <div class="note">
+            Запись на услуги
+        </div>
+    </a>
+</div>
+<div class="heaf">
+    <div>
+        <h1>Просмотр клиентов</h1>
+        <div>
+            <input class="inp" type="text" @bind="NewClient"/>
+            <div class="file">
+                <button class="serv" @onclick="AddFile">Добавить клиента</button>
+                <button class="save" @onclick="SaveFile">Сохранить базу</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="body">
+        <div class="view">
+            @foreach (var item in List)
+            {
+            <div href="" class="tapUp">
+                <h1 class="itemo">@item</h1>
+                <div>
+                    <button @onclick="() => Remove(item)" class="tabDown"><h3>Удалить</h3></button>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+@code {
+    public string NewClient { get; set; }
+    public IList<string> List = new List<string>();
+
+    protected override void OnInitialized()
+    {
+        OpenFile();
+    }
+    public void OpenFile()
+    {
+        if (File.Exists("client.json"))
+        {
+            string json = File.ReadAllText(path: "client.json");
+            List = JsonConvert.DeserializeObject<List<string>>(json);
+        }
+        else
+        {
+            SaveFile();
+        }
+    }
+    public void SaveFile()
+    {
+        var json = JsonConvert.SerializeObject(List);
+        File.WriteAllText("client.json", json);
+    }
+    private void Remove(string item)
+    {
+        List.Remove(item);
+        SaveFile();
+    }
+    private void AddFile()
+    {
+        List.Add(NewClient);
+        NewClient = string.Empty;
+        SaveFile();
+    }
+}
