@@ -10,7 +10,7 @@
                 Клиенты
             </div>
     </a>
-    <a style="text-decoration: none" href="https://localhost:44312/weather">
+    <a style="text-decoration: none" href="https://localhost:44312/signup">
         <div class="note">
             Запись на услуги
         </div>
@@ -33,9 +33,9 @@
         <div class="view">
             @foreach (var item in list)
             {
-                <div href="" class="tabUp">
-                    <h1 class="itemu">@item</h1>
-                    <div>
+                <div class="tabUp">
+                    <div class="tap">
+                        <h1 class="itemu">@item</h1>
                         <button @onclick="() => Remove(item)" class="tabDown"><h3>Удалить</h3></button>
                     </div>
                 </div>

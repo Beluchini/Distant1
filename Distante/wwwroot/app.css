@@ -61,6 +61,11 @@ h1:focus {
     height: 500px;
     border: 1px solid black;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.tap{
+    margin-top: 345px;
 }
 .tabDown {
     padding-top: 2px;
@@ -70,8 +75,10 @@ h1:focus {
     text-align: center;
     width: 340px;
     min-height: 40px;
+    max-height: 100px;
     border: 1px solid blue;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 .view {
     display: flex;
@@ -84,11 +91,10 @@ h1:focus {
     color: white;
     margin-left: 10px;
     background-color: rgba(0, 0, 255, 0.33);
-    margin-top: 345px;
     text-align: center;
     width: 340px;
     min-height: 60px;
-    max-height: 100px;
+    max-height: 200px;
     border: 1px solid blue;
     border-radius: 5px;
 }
@@ -108,7 +114,6 @@ h1:focus {
     margin-top: 15px;
 }
 .inp{
-    
     margin-left: -20px;
     padding-left: 13px;
     font-size: 30px;
@@ -212,4 +217,72 @@ h1:focus {
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+.caps{
+    background-color: rgba(152, 152, 152, 0.29);
+    backdrop-filter: blur(1px);
+    font-size: 20px;
+    text-align: center;
+    min-height: 150px;
+    max-height: 300px;
+    min-width: 150px;
+    max-width: 200px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.tex{
+    margin: 9px;
+    min-height: 100px;
+    max-height: 140px;
+    min-width: 140px;
+    max-width: 190px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgba(128, 128, 128, 0.6);
+    backdrop-filter: blur(5px);
+}
+.del{
+    background-color: rgba(128, 128, 128, 0.6);
+    backdrop-filter: blur(5px);
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 140px;
+    margin-bottom: 5px;
+}
+.dack{
+    background-image: url("photo_2025-03-08_19-26-35.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.front{
+    margin-top: 100px;
+    margin-left: 420px;
+    width: 1000px;
+    height: 200px;
+    background-color: rgba(92, 99, 106, 0.78);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 50px;
+}
+.add{
+    margin-left: 70px;
+    margin-top: 50px;
+}
+.serice{
+    text-align: center;
+    font-size: 24px;
+    padding-left: 5px;
+    border-radius: 25px;
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 50px;
+    min-width: 200px;
+    max-width: 250px;
 }

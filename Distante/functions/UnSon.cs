@@ -4,9 +4,9 @@ public class UnSon
 {
     public string NewService { get; set; }
     public string NewClient { get; set; }
-    public string NewDate { get; set; }
+    public DateOnly NewDate { get; set; }
 
-    public UnSon(string newService, string newClient, string newDate)
+    public UnSon(string newService, string newClient, DateOnly newDate)
     {
         NewService = newService;
         NewClient = newClient;

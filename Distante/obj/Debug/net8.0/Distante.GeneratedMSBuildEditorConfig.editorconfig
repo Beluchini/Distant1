@@ -34,8 +34,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/я/RiderProjects/Distante/Distante/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+[C:/Users/я/RiderProjects/Distante/Distante/Components/Pages/SignUp.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTaWduVXAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/я/RiderProjects/Distante/Distante/Components/Routes.razor]
@@ -49,7 +49,3 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/я/RiderProjects/Distante/Distante/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-3qg5m2iikl
-
-[C:/Users/я/RiderProjects/Distante/Distante/Components/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-nk8vwji9fv

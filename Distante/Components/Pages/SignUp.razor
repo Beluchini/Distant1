@@ -1,9 +1,10 @@
-﻿@page "/weather"
+﻿@page "/signup"
 @attribute [StreamRendering]
 @using Newtonsoft.Json
 @rendermode InteractiveServer
 @using Distante.functions
 <PageTitle>SignUp</PageTitle>
+<body class="dack"></body>
 
 <div class="view">
     <a style="text-decoration: none" href="https://localhost:44312/Client">
@@ -17,25 +18,45 @@
         </div>
     </a>
 </div>
+<div class="view">
+    <div class="">
+        <div class="front">
+            <div class="add">
+                <div style="padding-top: 5px" class="serice">Выберите услугу</div>
+                <select class="serice" @bind="_NewService">
+                    @foreach (var item in list)
+                    {
+                    <option>
+                        @item
+                    </option>
+                    }
+                </select>
+            </div>
+            <div style="margin-top: 50px">
+                <div style="padding-top: 5px" class="serice">Выберите клиента</div>
+                <select class="serice" @bind="_NewClient">
+                    @foreach (var item in List)
+                    {
+                    <option>
+                        @item
+                    </option>
+                    }
+                </select>
+            </div>
+            <div style="margin-top: 50px">
+                <div style="padding-top: 5px" class="serice">Введите дату</div>
+                <input style="border: 1px solid white" class="serice" type="date" @bind="_NewDate"/>
+            </div>
+            <div style="margin-top: 50px" class="parent">
+                <button style="border: 1px solid white" class="serice" @onclick="AddFile">Добавить</button>
+                <button style="border: 1px solid white" class="serice" @onclick="SaveFile">Сохранить</button>
+            </div>
+        </div>
+        
+    </div>
 
-<select @bind="_NewService">
-    @foreach (var item in list)
-    {
-        <option >
-            @item
-        </option>
-    }
-</select>
-<select @bind="_NewClient">
-    @foreach (var item in List)
-    {
-        <option>
-            @item
-        </option>
-    }
-</select>
-<input type="text" @bind="_NewDate"/>
-<button @onclick="AddFile">Добавить</button>
+</div>
+
 
 <div>
     <div class="body">
@@ -43,21 +64,23 @@
             @foreach (var item in last)
             {
                 <div class="parent">
-                    <div>
-                        <div>Услуга: @item.NewService</div>
-                        <div>Клиент: @item.NewClient</div>
-                        <div>Дата: @item.NewDate</div>
-                    </div> 
-                </div>
+                    <div class="caps">
+                        <div class="tex">
+                            <div>@item.NewService</div>
+                            <div>@item.NewClient</div>
+                            <div>@item.NewDate</div>
+                        </div>
+                        <button class="del" @onclick="() => Remove(item)">Удалить</button>
+                    </div>
+                    </div>
             }
-            
         </div>
     </div>
 </div>
 @code {
     public string _NewService { get; set; }
     public string _NewClient { get; set; }
-    public string _NewDate { get; set; }
+    public DateOnly _NewDate { get; set; }
     public IList<string> list = new List<string>();
     public IList<string> List = new List<string>();
     public IList<UnSon> last = new List<UnSon>();
@@ -102,12 +125,10 @@
     private void AddFile()
     {
         var task = new UnSon(_NewService, _NewClient, _NewDate);
-        
         last.Add(task);
         _NewService = string.Empty;
         _NewClient = string.Empty;
-        _NewDate = string.Empty;
+        _NewDate = DateOnly.MinValue;
         SaveFile();
     }
-    public UnSon NewService { get; set; }
 }
