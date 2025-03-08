@@ -33,3 +33,4 @@ C:\Users\я\RiderProjects\Distante\Distante\obj\Debug\net8.0\Distante.genruntime
 C:\Users\я\RiderProjects\Distante\Distante\obj\Debug\net8.0\ref\Distante.dll
 C:\Users\я\RiderProjects\Distante\Distante\bin\Debug\net8.0\servic.json
 C:\Users\я\RiderProjects\Distante\Distante\bin\Debug\net8.0\client.json
+C:\Users\я\RiderProjects\Distante\Distante\bin\Debug\net8.0\union.json

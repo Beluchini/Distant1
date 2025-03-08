@@ -1,28 +1,66 @@
 ﻿@page "/weather"
 @attribute [StreamRendering]
 @using Newtonsoft.Json
-<PageTitle>Weather</PageTitle>
-<select>
-    @foreach (var item in _list)
+@rendermode InteractiveServer
+@using Distante.functions
+<PageTitle>SignUp</PageTitle>
+
+<div class="view">
+    <a style="text-decoration: none" href="https://localhost:44312/Client">
+        <div class="clie">
+            Клиенты
+        </div>
+    </a>
+    <a style="text-decoration: none" href="https://localhost:44312/">
+        <div class="note">
+            Услуги
+        </div>
+    </a>
+</div>
+
+<select @bind="_NewService">
+    @foreach (var item in list)
+    {
+        <option >
+            @item
+        </option>
+    }
+</select>
+<select @bind="_NewClient">
+    @foreach (var item in List)
     {
         <option>
             @item
         </option>
     }
 </select>
-<select>
-    @foreach (var item in _List)
-    {
-        <option>
-            @item
-        </option>
-    }
-</select>
-<input type="date" />
+<input type="text" @bind="_NewDate"/>
+<button @onclick="AddFile">Добавить</button>
+
+<div>
+    <div class="body">
+        <div class="wiev">
+            @foreach (var item in last)
+            {
+                <div class="parent">
+                    <div>
+                        <div>Услуга: @item.NewService</div>
+                        <div>Клиент: @item.NewClient</div>
+                        <div>Дата: @item.NewDate</div>
+                    </div> 
+                </div>
+            }
+            
+        </div>
+    </div>
+</div>
 @code {
-    public string NewNote { get; set; }
-    public IList<string> _list = new List<string>();
-    public IList<string> _List = new List<string>();
+    public string _NewService { get; set; }
+    public string _NewClient { get; set; }
+    public string _NewDate { get; set; }
+    public IList<string> list = new List<string>();
+    public IList<string> List = new List<string>();
+    public IList<UnSon> last = new List<UnSon>();
     
     protected override void OnInitialized()
     {
@@ -34,9 +72,11 @@
         if (File.Exists("servic.json"))
         {
             string json = File.ReadAllText(path: "servic.json");
-            string jsom = File.ReadAllText(path: "client.json");
-            _list = JsonConvert.DeserializeObject<List<string>>(json);
-            _List = JsonConvert.DeserializeObject<List<string>>(jsom);
+            string _json = File.ReadAllText(path: "client.json");
+            string jsom = File.ReadAllText(path: "union.json");
+            list = JsonConvert.DeserializeObject<List<string>>(json);
+            List = JsonConvert.DeserializeObject<List<string>>(_json);
+            last = JsonConvert.DeserializeObject<List<UnSon>>(jsom);
         }
         else
         {
@@ -46,9 +86,28 @@
 
     public void SaveFile()
     {
-        var json = JsonConvert.SerializeObject(_list);
-        var jsom = JsonConvert.SerializeObject(_List);
+        var json = JsonConvert.SerializeObject(list);
+        var _json = JsonConvert.SerializeObject(List);
+        var jsom = JsonConvert.SerializeObject(last);
         File.WriteAllText("servic.json", json);
-        File.WriteAllText("client.json", jsom);
+        File.WriteAllText("client.json", _json);
+        File.WriteAllText("union.json", jsom);
     }
+    
+    private void Remove(UnSon item)
+    {
+        last.Remove(item);
+        SaveFile();
+    }
+    private void AddFile()
+    {
+        var task = new UnSon(_NewService, _NewClient, _NewDate);
+        
+        last.Add(task);
+        _NewService = string.Empty;
+        _NewClient = string.Empty;
+        _NewDate = string.Empty;
+        SaveFile();
+    }
+    public UnSon NewService { get; set; }
 }
